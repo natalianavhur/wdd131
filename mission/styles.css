@@ -1,0 +1,43 @@
+body{
+    margin: 20px 250px;
+    border: 1px solid black;
+    padding: 50px 135px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1{
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 3px;
+}
+h6 {
+    color: hsl(196, 84%, 43%);
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 3px;
+    border-bottom: 1px solid gray;
+}
+
+p{
+    font-size: 15px;
+    text-align: left;
+    line-height: 1.5;
+}
+
+#university{
+    font-style: italic;
+}
+
+.actions{
+    display: block;
+    padding-left: 10px;
+}
+
+footer{
+    text-align: center;
+}
+
+img{
+    width: 130px;
+    padding-top: 20px;
+}
