@@ -4,6 +4,14 @@ body{
     padding: 2% 7%;
     font-family: 'Times New Roman', Times, serif;
 }
+body.dark{
+    background-color: #333;
+    color: white;
+    border: 0.1em solid white;
+}
+.dark h2{
+    color: #A0D4ED;
+}
 
 h1{
     text-align: center;
@@ -11,7 +19,8 @@ h1{
     letter-spacing: 0.1em;
 }
 h2 {
-    color: hsl(207, 82%, 36%);
+    /*color: hsl(207, 82%, 36%);*/
+    color: #006EB6;
     text-align: center;
     font-size: 0.7em;
     letter-spacing: 3px;
