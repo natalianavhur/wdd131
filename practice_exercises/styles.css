@@ -1,0 +1,116 @@
+/* Styling for the hamburger menu */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+/* Navbar styling */
+#nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+#nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+#nav-links a:hover {
+    background-color: #d2691e;
+    border-radius: 4px;
+}
+
+/* Responsive menu - hidden by default on mobile */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #4a2c2a;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    #nav-links.active {
+        display: flex;
+    }
+
+    #nav-links li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navbar ul li a {
+        padding: 10px;
+    }
+}
+
+/* Hero Section Button Animation */
+.hero-btn {
+    padding: 10px 20px;
+    background-color: #4a2c2a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.hero-btn:hover {
+    background-color: #d2691e;
+    transform: scale(1.1);
+}
+
+.hero-btn:active {
+    transform: scale(0.95);
+}
+
+/* Product Grid Animations */
+.grid-item {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #f4f4f4;
+    }
+
+    .hero-btn {
+        background-color: #333;
+    }
+
+    .grid-item {
+        background-color: #333;
+    }
+
+    header {
+        background-color: #000;
+    }
+}
