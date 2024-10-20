@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+
+        <li>Menu1</li>
+        <li>Menu</li>
+        <li>Menu</li>
+        <li>Menu</li>
+        <li>Menu</li>
+    </ul>
+    <ul>
+
+        <li>Menu2</li>
+        <li>Menu</li>
+        <li>Menu</li>
+        <li>Menu</li>
+        <li>Menu</li>
+    </ul>
+    <script>
+        // variables
+        const a = 1
+        let b = 2
+        var c = 3
+
+        const obj = {
+            a: 1,
+            b: 2,
+            c: 3,
+            d: 4,
+            getName: () => {
+                return "Brother Willden"
+            }
+        }
+        //'test '.trim()
+
+        function sum(a, b) {
+            return a + b
+        }
+
+        const sum2 = (a, b) => a + b
+
+        const sum3 = function (a, b) {
+            return a + b
+        }
+        console.log(obj.a)
+        console.log(obj.getName())
+
+        const d = document
+
+        console.log(d.querySelector('ul'))
+        console.log(d.querySelectorAll('ul'))
+
+        let counter = 0
+        while (counter < 10) {
+            console.log('hello')
+            counter++
+        }
+        for (let i = 0; i < 10; i++) {
+            console.log('I am in a for loop' + i)
+        }
+        listItems.forEach((ele) => {
+            ele.classList.add('hello')
+        })
+
+
+    </script>
+
+</body>
+
+</html>

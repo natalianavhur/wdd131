@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+    font-family: 'Playfair';
+    padding: 20px;
+}
+
+.skiptocontent a {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+.skiptocontent a:focus {
+    top: 0;
+    outline: none;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+    color: #471504;
+}
+
+.navigation {
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 0;
+    justify-content: end;
+    border-top: solid 1px #bb9457;
+    border-bottom: solid 1px #bb9457;
+}
+
+.navigation li {
+    padding: 10px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #6f1d1b;
+    font-size: 17px;
+    font-family: 'Rubik';
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.book {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+}
+
+.book2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+}
+
+.book-details {
+    padding: 10px;
+    text-align: end;
+    color: #471504;
+}
+.book-details p{
+    font-size: 17px;
+    padding: 0;
+    margin: 4px;
+}
+
+.book-content {
+    text-align: center;
+}
+
+.book-content h2 {
+    text-align: left;
+    color: #6f1d1b;
+    font-size: 26px;
+    font-family: 'Playfair';
+    margin-top: 0;
+}
+
+.book-content img {
+    max-width: 100%;
+    height: 150px;
+    width: 150px;
+    height: auto;
+    text-align: center;
+}
+
+.book-content p {
+    color: #471504;
+    font-size: 13px;
+    font-family: 'Rubik';
+    margin-top: 0;
+}
+.filter{
+    border: solid 1px #bb9457; 
+}
