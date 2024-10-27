@@ -76,6 +76,7 @@ main {
     padding: 10px;
     text-align: end;
     color: #471504;
+    border-right: solid 1px #471504;
 }
 .book-details p{
     font-size: 17px;
