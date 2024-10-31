@@ -31,8 +31,33 @@ select {
     appearance: none;
 }
 
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
 .hide {
     display: none;
     /* Initially hide the credit card input and label */
+}
+
+.placeOrder {
+    background-color: rgb(57, 148, 57);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
 }
 

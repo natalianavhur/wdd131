@@ -31,6 +31,16 @@
                 <option value="creditCard">Credit Card</option>
                 <option value="paypal">PayPal</option>
             </select>
+
+            <p id="creditCardNumberContainer" class="hide">
+                <label for="creditCardNumber">Credit Card:</label>
+                <input type="text" id="creditCardNumber" placeholder="Enter 16 digits" pattern="[0-19]{16}" required />
+            </p>
+            <p id="paypalUsernameContainer" class="hide">
+                <label>Paypal Username:</label>
+                <input type="text" id="paypalUsername" placeholder="Enter PayPal username" required></input>
+            </p>
+            <button class="placeOrder">Place order</button>
     </main>
 </body>
 

@@ -1,4 +1,3 @@
-// form-demo.js
 function validateForm(event) {
   // get a reference to the form. Because we attached a submit event listener to the form itself, we can access the form either through 'event.target', or 'this'
   const theForm = event.target;
@@ -9,7 +8,17 @@ function validateForm(event) {
   // start by assuming the form is valid.
   let isValid = true;
   // add our validations here
-
+  if (theForm.paymentMethod.value === "creditCard") {
+    // normally we would need contact the credit card company to verify the number...we are only going to allow one number as valid to keep things simple.
+    if (theForm.creditCardNumber.value !== "1234123412341234") {
+      isValid = false;
+      errors.push("Invalid Credit Card Number");
+    }
+  }
+  if (theForm.fullName.value !== "Bob") {
+    isValid = false;
+    errors.push("Your name is not Bob");
+  }
   // if we ran into any problems above valid will be false.
   if (!isValid) {
     //stop the form from being submitted
@@ -23,18 +32,28 @@ function validateForm(event) {
 
 function togglePaymentDetails(e) {
   // get a reference to the form. We can access all the named form inputs through the form element.
-  const theForm = ;
+  const theForm = document.querySelector("#checkoutForm");
   // we will also need the creditCardContainer and paypalUsernameContainer
-  const creditCardContainer = ;
-  const paypalContainer = ;
+  const creditCardContainer = document.getElementById(
+    "creditCardNumberContainer"
+  );
+  const paypalContainer = document.getElementById("paypalUsernameContainer");
 
-  // Hide payment containers by adding the '.hide' class to each of them
+  // Hide payment containers
+  creditCardContainer.classList.add("hide");
+  paypalContainer.classList.add("hide");
+  // Disable required for the hidden fields...if we hide a required field the browser will throw an error when we try to submit!
+  theForm.creditCardNumber.required = false;
+  theForm.paypalUsername.required = false;
 
-  // Disable required for payment fields...if we hide a required field the browser will throw an error when we try to submit!
-
-
-  // Show the container based on the selected payment method, and add the required attribute back.
-
+  // Show the container based on the selected payment method
+  if (theForm.paymentMethod.value === "creditCard") {
+    creditCardContainer.classList.remove("hide");
+    theForm.creditCardNumber.required = true;
+  } else if (theForm.paymentMethod.value === "paypal") {
+    paypalContainer.classList.remove("hide");
+    theForm.paypalUsername.required = true;
+  }
 }
 
 // helper function to display our errors.
@@ -44,5 +63,7 @@ function showErrors(errors) {
   errorEl.innerHTML = html.join("");
 }
 // attach a change event handler to the paymentMethod input
+document.querySelector("#paymentMethod").addEventListener("change", togglePaymentDetails);
 
 // attach a submit event handler to the form
+document.querySelector("#checkoutForm").addEventListener("submit", validateForm);

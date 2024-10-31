@@ -43,8 +43,7 @@ function displayArticles(articles) {
 	articles.forEach(item => {
 
 		const newBook = document.createElement('div');
-		newBook.classList.add('book'); // Add class for styling
-
+		newBook.classList.add('book');
 
 		const articleHTML = `
             <div class="book-details">
@@ -58,7 +57,6 @@ function displayArticles(articles) {
                 <img src="${item.imgSrc}" alt="${item.imgAlt}">
                 <p>${item.description}</p>
             </article>`;
-
 		
 		newBook.innerHTML = articleHTML;
 		container.appendChild(newBook);
