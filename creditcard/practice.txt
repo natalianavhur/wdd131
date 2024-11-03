@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f2f2f2;
+
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+}
+
+.credit-card-layout {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 5fr 1fr 1fr;
+    gap: 10px;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Front part of the credit card */
+.credit-card-front {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    background-color: #d3d3d3;
+    /* Light gray */
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.card-header {
+    grid-column: 1/2;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.credit-card-front img {
+    text-align: left;
+    grid-column: 2/3;    
+}
+
+.card-number {
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+
+.card-holder {
+    font-size: 20px;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin-right: 10px;
+}
+
+.expiration {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    font-size: 20px;
+    border: 0;
+    margin-bottom: 0;
+    padding: 10px;
+}
+.expiration label {
+    grid-column: 1/3;
+}
+
+#card-month {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#card-year {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.card-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.credit-card-front label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 0.8em;
+    color: #555;
+}
+
+.credit-card-front input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    background-color: #fff;
+}
+
+/* Back part of the credit card */
+.credit-card-back {
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: #d3d3d3;
+    color: #333;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.dark-grey-bar{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background-color: #555;
+    height:30px;
+    margin: 0;
+}
+
+.card-cvc{
+    grid-column: 2/3;
+    /* grid-row: 2/3; */
+}
+.credit-card-back input {
+    width: 50px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-size: 1em;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Submit button */
+#card-btn {
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #4a90e2;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+#card-btn:hover {
+    background-color: #3a78c2;
+}
+
+/* Submit button styling */
+#card-btn {
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    border: solid black 2px;
+    background-color: #d3d3d3;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+}
+
+#card-btn:hover {
+    background-color: #3a78c2;
+}
