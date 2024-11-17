@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Website that include recipes with images and their desciption.">
+        <meta name="author" content="Natalia Navarrete">
+        <meta name="keywords" content="recipes, cooking, food, easy meals, chicken recipes">
+        <meta property="og:title" content="Recipe Book">
+        <meta property="og:type" content="website" />
+        <meta property="og:description"
+            content="A collection of delicious food recipes with images, descriptions and ratings.">
+        <meta property="og:image" content="URL to an image">
+        <meta property="og:url" content="URL of the page">
+        <meta name="twitter:card" content="summary_large_image">
+        <title>Recipes</title>
+        <a href="https://www.flaticon.com/free-icons/recipe"></a>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" />
+        <link href="recipes.css" rel="stylesheet" />
+        <script src="recipes.mjs" defer></script>
+    </head>
+    <header>
+        <img src="./images/recipe-book.png" alt="Recipe Book Icon">
+        <h1>RECIPE BOOK</h1>
+        <form class="search-form">
+            <input type="text" id="search-recipe" class="search-input" placeholder="Find a recipe">
+            <div class="divider"></div>
+            <button type="submit" class="search-button">
+                <img src="./images/search.svg" alt="Search">
+            </button>
+        </form>
+    </header>
+    <main>
+        <section class="recipe-section">
+            <article class="recipe-card">
+                <img src="./images/escalopes-de-poulet-a-la-creme.webp" alt="Chicken with creamy sauce and green beans"
+                    class="recipe-image" loading="lazy">
+                <div class="recipe-content">
+                    <header class="recipe-header">
+                        <p class="recipe-category">Entree</p>
+                        <h2 class="recipe-title">Chicken with Cream</h2>
+                    </header>
+                    <div class="recipe-rating" role="img" aria-label="Rating: 4.5 out of 5 stars">
+                        <span aria-hidden="true" class="rating-star">⭐</span>
+                        <span aria-hidden="true" class="rating-star">⭐</span>
+                        <span aria-hidden="true" class="rating-star">⭐</span>
+                        <span aria-hidden="true" class="rating-star-empty">⭐</span>
+                        <span aria-hidden="true" class="rating-star-empty">☆</span>
+                    </div>
+                    <p class="recipe-description">
+                        Delicious quick and easy creamy rice dish. The mustard, mushrooms, and lemon all blend together
+                        wonderfully.
+                    </p>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer class="site-footer">
+
+        <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates-->
+        <p class="footer-credit">Recipe icons created by <a href="https://www.flaticon.com/free-icons/recipe"
+                target="_blank" rel="noopener noreferrer">Freepik - Flaticon</a></p>
+        <div class="social-links">
+            <a href="#"><img src="images/instagram_icon.svg" alt="Instagram"></a>
+            <a href="#"><img src="images/youtube_icon.svg" alt="YouTube"></a>
+            <a href="#"><img src="images/pinterest_icon.svg" alt="Pinterest"></a>
+        </div>
+
+    </footer>
+</body>
+
+</html>
