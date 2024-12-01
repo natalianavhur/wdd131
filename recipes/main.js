@@ -1,18 +1,15 @@
 import recipes from './recipes.mjs';
 
-// Random function to get a random recipe
 function random(num) {
   return Math.floor(Math.random() * num);
 }
 
-// Get random list entry
 function getRandomListEntry(list) {
   const listLength = list.length;
   const randomNum = random(listLength);
   return list[randomNum];
 }
 
-// Template functions for recipe, tags, and ratings
 function tagsTemplate(tags) {
   return tags.map(tag => `<li>${tag}</li>`).join('');
 }
@@ -55,7 +52,6 @@ function renderRecipes(recipeList) {
   recipeContainer.innerHTML = recipeHTML;
 }
 
-// Filter recipes function
 function filterRecipes(query) {
   return recipes
     .filter(recipe => {
@@ -66,18 +62,16 @@ function filterRecipes(query) {
         recipe.ingredients.some(ingredient => ingredient.toLowerCase().includes(query))
       );
     })
-    .sort((a, b) => a.name.localeCompare(b.name)); // Sort alphabetically
+    .sort((a, b) => a.name.localeCompare(b.name)); 
 }
 
-// Search handler function
 function searchHandler(event) {
-  event.preventDefault(); // Prevent form reload
-  const query = document.getElementById('search-recipe').value.toLowerCase(); // Match the correct ID
+  event.preventDefault(); 
+  const query = document.getElementById('search-recipe').value.toLowerCase();
   const filteredRecipes = filterRecipes(query);
-  renderRecipes(filteredRecipes); // Render filtered recipes
+  renderRecipes(filteredRecipes); 
 }
 
-// Initialize the page with a random recipe
 function init() {
   const recipe = getRandomListEntry(recipes);
   renderRecipes([recipe]);
@@ -85,5 +79,4 @@ function init() {
 
 window.onload = init;
 
-// Add event listener to the search button
 document.getElementById('search-button').addEventListener('click', searchHandler);
