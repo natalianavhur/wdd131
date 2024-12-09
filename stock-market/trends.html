@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Natalia Navarrete">
+    <meta name="keywords" content="stock market, transactions, predictions.">
+
+    <meta property="og:title" content="Recipe Book">
+    <meta property="og:type" content="website" />
+    <meta property="og:description"
+        content="A collection of delicious food recipes with images, descriptions and ratings.">
+    <meta property="og:image" content="URL to an image">
+    <meta property="og:url" content="URL of the page">
+    <meta name="twitter:card" content="summary_large_image">
+
+
+    <title>Stock Market Predictions</title>
+
+    <a href="https://www.flaticon.com/free-icons/recipe"></a>
+    <link href="./styles/stocks.css" rel="stylesheet" />
+    <script src="stocks.js" type="module" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Stock Market Dashboard</h1>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="stocks-detail.html">Stocks Details</a>
+            <a href="trends.html">Trends</a>
+        </nav>
+
+        <form class="search-form">
+            <input type="text" class="search-input" placeholder="Find a stock">
+            <div class="divider"></div>
+            <button type="submit" class="search-button">
+                <img src="./images/search.svg" alt="Search">
+            </button>
+        </form>
+
+    </header>
+
+    <main>
+
+        <section>
+            <div>
+                <canvas id="myChart"></canvas>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+
+        <img>
+        <p></p>
+
+    </footer>
+
+</body>
+
+</html>

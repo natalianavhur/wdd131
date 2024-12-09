@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&family=Source+Sans+Pro:wght@400;600&display=swap");
+
+:root {
+    --primary-color: #1d3557;
+    --secondary-color: #f1faee;
+    --accent1-color: #e63946;
+    --accent2-color: #a8dadc;
+
+    --heading-font: 'Source Sans Pro', sans-serif;
+    --paragraph-font: 'Roboto', sans-serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid var(--accent2-color);
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin: 0 15px;
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent2-color);
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.search-input {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid var(--accent2-color);
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-family: var(--paragraph-font);
+    font-size: 1rem;
+}
+
+.divider {
+    width: 2px;
+    height: 100%;
+    background-color: var(--accent2-color);
+}
+
+.search-button {
+    background-color: var(--accent1-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.search-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.search-button:hover {
+    background-color: #b02835;
+}
+
+main {
+    padding: 20px;
+}
+
+.top-performers {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    border: 1px solid var(--accent2-color);
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+table tr:nth-child(even) {
+    background-color: var(--accent2-color);
+}
+
+table tr:hover {
+    background-color: #d1f2f2;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    border-top: 4px solid var(--accent2-color);
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-family: var(--paragraph-font);
+}
+
+
+/* Stock Detail Page */
+
+#stock-detail, #historical-data, #prediction {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid var(--accent2-color);
+    border-radius: 8px;
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#historical-data table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#historical-data th, #historical-data td {
+    border: 1px solid var(--accent2-color);
+    padding: 10px;
+    text-align: center;
+}
+
+#historical-data th {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+#historical-data tr:nth-child(even) {
+    background-color: var(--accent2-color);
+}
